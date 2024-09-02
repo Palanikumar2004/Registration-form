@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analyst Job Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="form-wrapper">
+        <form id="registrationForm">
+            <h2>Job Registration Form</h2>
+
+            <!-- Personal Details -->
+            <fieldset>
+                <legend>Personal Details</legend>
+                
+                <!-- Full Name -->
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required pattern="[A-Za-z\s]{2,50}"
+                        title="Name must contain only letters and spaces, and be between 2 to 50 characters long.">
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                        title="Please enter a valid email address (e.g., example@gmail.com).">
+                </div>
+
+                <!-- Phone Number -->
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" pattern="[0-9]{10}" required
+                        title="Phone number must contain exactly 10 digits.">
+                </div>
+            </fieldset>
+
+            <!-- Current Status -->
+            <div class="form-group">
+                <label for="status">Current Status</label>
+                <select id="status" name="status" required>
+                    <option value="">Select status</option>
+                    <option value="student">Student</option>
+                    <option value="developer">Developer</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <!-- Degree Type -->
+            <div class="form-group">
+                <label for="degree">Degree Type</label>
+                <select id="degree" name="degree" required>
+                    <option value="">Select degree</option>
+                    <option value="be">BE</option>
+                    <option value="btech">B.Tech</option>
+                    <option value="bsc">BSc</option>
+                    <option value="bcom">BCom</option>
+                    <option value="me">ME</option>
+                    <option value="mtech">M.Tech</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <!-- Graduation Year -->
+            <div class="form-group">
+                <label for="batch">Graduation Year</label>
+                <select id="batch" name="batch" required>
+                    <option value="">Select year</option>
+                </select>
+            </div>
+
+            <!-- College Name -->
+            <div class="form-group">
+                <label for="college">College Name</label>
+                <input type="text" id="college" name="college" placeholder="Enter your college name" required>
+            </div>
+
+            <!-- Internship Details -->
+            <div class="form-group">
+                <label for="internship">Internship Details</label>
+                <textarea id="internship" name="internship" rows="4" placeholder="Describe your internship experience..."></textarea>
+            </div>
+
+            <!-- Certification Upload -->
+            <div class="form-group">
+                <label for="certification">Certification Upload</label>
+                <input type="file" id="certification" name="certification" accept=".pdf,.jpg,.png,.doc,.docx">
+            </div>
+
+            <!-- Skills -->
+            <div class="form-group">
+                <label for="skills">Skills</label>
+                <input type="text" id="skills" name="skills" placeholder="Enter your skills separated by commas" required>
+            </div>
+
+            <!-- Resume Upload -->
+            <div class="form-group">
+                <label for="resume">Resume</label>
+                <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-buttons">
+                <button type="submit">Submit Application</button>
+            </div>
+        </form>
+
+        <!-- Success Message -->
+        <div id="successMessage" class="success-message">
+            <h2>Your response has been submitted successfully!</h2>
+            <button id="editResponse" class="btn-edit">Edit Your Response</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
